@@ -17,7 +17,7 @@ function memoria() {
     parrafoVal = parrafo.innerText
     setTimeout(() => {
         parrafo.innerText = ''
-    }, 3000);
+    }, 1000);
 }
 buttonNumero.addEventListener('click',() =>{
     if(parrafoVal == inputNumero.value) {
@@ -40,7 +40,7 @@ function dibujar() {
         pizarraHTML.appendChild(imprimirLetras(letras_1))
         setTimeout(() => {
             parrafo2.innerText = ''
-        }, 3000);
+        }, 1000);
     }
     if (letras == 1) {
         const numero = numeroAleatorio(letras_2)
@@ -50,7 +50,7 @@ function dibujar() {
         pizarraHTML.appendChild(imprimirLetras(letras_2))
         setTimeout(() => {
             parrafo2.innerText = ''
-        }, 3000);
+        }, 1000);
     }
     if (letras == 2) {
         const numero = numeroAleatorio(letras_3)
@@ -60,7 +60,7 @@ function dibujar() {
         pizarraHTML.appendChild(imprimirLetras(letras_3))
         setTimeout(() => {
             parrafo2.innerText = ''
-        }, 3000);
+        }, 1000);
     }
     if (letras == 3) {
         const numero = numeroAleatorio(letras_4)
@@ -70,7 +70,7 @@ function dibujar() {
         pizarraHTML.appendChild(imprimirLetras(letras_4))
         setTimeout(() => {
             parrafo2.innerText = ''
-        }, 3000);
+        }, 1000);
     }
 }
 
