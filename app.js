@@ -11,13 +11,36 @@ const buttonNumero = document.getElementById('button-numero')
 let parrafoVal = ''
 let parrafoLetra = ''
 
+function tiempo(incremento){
+    let total = 0
+    let i = 0
+    return function() {
+        total = incremento
+        if(i > 8){
+            total = 3000
+        console.log(total,i)
+            return total
+        }
+        if(i>5){
+            total = 2000
+            i++
+            console.log(total,i)
+            return total
+        }
+        i++
+        console.log(total,i)
+        return total
+    }
+}
+const sumardos = tiempo(1000)
+
 function memoria() {
     const numero = Math.floor(Math.random() * 10 )
     parrafo.innerText = parrafoVal + numero
     parrafoVal = parrafo.innerText
     setTimeout(() => {
         parrafo.innerText = ''
-    }, 1000);
+    }, sumardos());
 }
 buttonNumero.addEventListener('click',() =>{
     if(parrafoVal == inputNumero.value) {
@@ -40,7 +63,7 @@ function dibujar() {
         pizarraHTML.appendChild(imprimirLetras(letras_1))
         setTimeout(() => {
             parrafo2.innerText = ''
-        }, 1000);
+        }, sumardos());
     }
     if (letras == 1) {
         const numero = numeroAleatorio(letras_2)
@@ -50,7 +73,7 @@ function dibujar() {
         pizarraHTML.appendChild(imprimirLetras(letras_2))
         setTimeout(() => {
             parrafo2.innerText = ''
-        }, 1000);
+        }, sumardos());
     }
     if (letras == 2) {
         const numero = numeroAleatorio(letras_3)
@@ -60,7 +83,7 @@ function dibujar() {
         pizarraHTML.appendChild(imprimirLetras(letras_3))
         setTimeout(() => {
             parrafo2.innerText = ''
-        }, 1000);
+        }, sumardos());
     }
     if (letras == 3) {
         const numero = numeroAleatorio(letras_4)
@@ -70,7 +93,7 @@ function dibujar() {
         pizarraHTML.appendChild(imprimirLetras(letras_4))
         setTimeout(() => {
             parrafo2.innerText = ''
-        }, 1000);
+        }, sumardos());
     }
 }
 
